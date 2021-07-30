@@ -28,7 +28,8 @@ public class RogiDTOTester {
 		System.out.println(dto);
 		
 		dto = dao.findOne((name)-> name.getName().equals("Pavan"));
-		System.out.println(dto);
+		if(dto.isPresent())
+			System.out.println(dto);
 		
 		System.out.println(dao.totalSize());
 		
